@@ -1,0 +1,449 @@
+
+#scp-notice, #scp-trigger {
+top: initial !important;
+bottom: 0 !important;
+border-bottom: 0 !important;
+border-top: 2px solid #464024 !important;
+}
+
+a, h1, h2, h3, h4, h5, button.btn, .product-overlay p {
+font-family: 'Cavetown', 'ChildsPlayAgeTenOT';
+font-weight: 400;
+color: var(--accent_color);
+}
+
+button.btn {
+color: #464024;
+}
+
+.product-overlay p, body:after {
+background: #464024;
+}
+
+header {
+height: 140px;
+}
+
+main, footer, header, .width-wrapper {
+background-color: transparent;
+}
+
+footer, footer a {
+color: #464024;
+}
+
+@media only screen and (min-width: 1800px) {
+footer {
+  background-size: 100%;
+}
+}
+
+.product-item {
+background-size: cover;
+background-position: center;
+}
+
+.product-item.background-top {
+background-position: top;
+}
+
+.product-item.background-bottom {
+background-position: bottom;
+}
+
+.price {
+font-family: "Poppins", sans-serif;
+}
+
+.stardude {
+position: fixed;
+bottom: 0;
+right: 0;
+z-index: -1;
+max-width: 50vw;
+transform:rotate(0) translateX(200%);
+max-height: 50vh;
+max-width: 50vw;
+transition: transform 1s ease-in-out;
+}
+
+#geetar-star, #sad-star {
+right: initial;
+left: 0;
+transform: rotate(0) translateX(-200%);
+}
+
+.hello#waving-star, .hello#sprintin-star {
+transform: rotate(-35deg) translateX(50%);
+}
+
+.hello#geetar-star {
+transform: rotate(35deg) translateX(-50%);
+}
+
+.hello#sad-star {
+transform: rotate(35deg) translateX(-50%) rotateY(180deg);
+}
+
+#loadscreen, #staranim {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#loadscreen img, #staranim img {
+position: absolute;
+max-width: 90vw;
+width: 250px;
+filter: invert(1);
+}
+
+#loadscreen img:first-child, #staranim img:first-child {
+animation: SPIN 15s linear infinite;
+animation-play-state: paused;
+z-index: 1;
+}
+
+#loadscreen img:last-child, .not-safari #staranim img:last-child {
+animation: SPIN-Y 7.5s linear infinite reverse;
+animation-play-state: paused;
+z-index: 1;
+}
+
+#staranim img:last-child {
+animation: SPIN 15s linear infinite reverse;
+animation-play-state: paused;
+}
+
+.loading #loadscreen img:first-child, .loading #loadscreen img:last-child, .loaded #staranim img:first-child, .loaded #staranim img:last-child, .not-safari .loaded #staranim img:last-child {
+animation-play-state: running;
+}
+
+#staranim {
+width: 100px;
+height: 100px;
+position: relative;
+mix-blend-mode: exclusion;
+}
+
+#staranim img {
+width: 100%;
+height: 100%;
+}
+
+@keyframes SPIN {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+@keyframes SPIN-Y {
+0% { transform: rotateY(0deg); }
+100% { transform: rotateY(360deg); }
+}
+
+.cornernav-trigger {
+z-index: 12;
+}
+
+#cavecolink, #caveclublink {
+position: absolute;
+top: 20px;
+right: 0;
+padding: 10px;
+background: #464024;
+border-radius: 100%;
+width: 40px;
+height: 40px;
+overflow: hidden;
+margin: 0 20px;
+z-index: 12;
+border: 2px solid black;
+}
+
+#caveclublink {
+padding: 5px;
+top: 80px;
+}
+
+@media only screen and (min-width: 600px) {
+#cavecolink, #caveclublink {
+  width: 60px;
+  height: 60px;
+}
+
+#caveclublink {
+  top: 100px;
+}
+}
+
+.sticker {
+position: absolute;
+top: 0;
+left: 2%;
+z-index: 2;
+pointer-events: none;
+}
+
+.sticker li {
+padding: 5px 10px;
+color: #464024;
+text-shadow: 0 0 1px rgba(0,0,0,.6);
+margin: 10px 0;
+z-index: 10;
+text-align: center;
+pointer-events: none;
+}
+
+.sticker .pre-order {
+background-color: black; 
+}
+
+.sticker .sale {
+background-color: rgba(91,192,91,.9); 
+}
+
+.sticker .sold-out {
+color: black;
+background-color: #464024; 
+}
+
+body {
+position: relative;
+}
+
+body:after {
+min-height: 100vh;
+}
+
+.recent-products {
+margin: auto auto 10vh;
+}
+
+.recent-products, .tour {
+text-align: center;
+}
+
+.tour {
+max-width: 1250px;
+margin: auto;
+}
+
+.product-grid {
+margin-bottom: 5vh;
+}
+ 
+.loaded-content {
+  position: center,
+  width= 500%,
+  height= 300%
+}
+
+/* MUSIC PAGE */
+.music-row {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+.music-listing {
+margin: 1vw;
+}
+
+/* CAVECLUB */
+.caveclub {
+background: #f9f7b9;
+color: black;
+overflow: hidden;
+}
+
+:root.caveclub {
+--accent-color: #fcbc3b;
+}
+
+.caveclub.in {
+overflow-y: visible;
+}
+
+.caveclub:not(.in) .width-wrapper, .caveclub:not(.in) header, .caveclub:not(.in) footer {
+display: none;
+}
+
+.caveclub:after {
+background: inherit;
+}
+
+.caveclub .btn {
+color: black;
+}
+
+.caveclub .trigger  {
+background: #fcbc3b;
+}
+
+.caveclub .related-products {
+display: none;
+}
+
+.caveclub #caveclublogo {
+display: block;
+}
+
+.caveclub .logo #caveclublogo {
+display: block;
+}
+
+.caveclub .logo img {
+display: none;
+}
+
+.caveclub #loadscreen img {
+filter: invert(0);
+}
+
+.caveclub .product-overlay p, .caveclub .product-overlay p * {
+background: #fcbc3b;
+color: black;
+}
+
+.caveclub .selector-container, .caveclub .selector {
+color: black;
+border-color: black;
+}
+
+#password-lock {
+position: fixed;
+z-index: 10000000;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+flex-direction: column;
+background: #ed8450;
+}
+
+
+#password-lock .button {
+background: #faf8c1;
+border: 2px solid black;
+}
+
+#password {
+background: #faf8c1;
+color: black;
+border: 2px solid black;
+text-align: center;
+}
+
+#password:placeholder {
+color: gray;
+}
+
+#password-lock > img {
+width: 300px;
+margin-bottom: 10px;
+}
+
+.in #password-lock {
+display: none;
+}
+
+.cct {
+display: none;
+}
+
+/* OVERRIDES */
+
+.gc-noscroll header {
+z-index: -100;
+}
+
+.gc-noscroll .back-button {
+z-index: -100;
+}
+
+.loading .glass-case {
+transform: translateX(500vw);
+}
+
+.glass-case {
+margin: auto;
+width: 100% !important;
+}
+
+.gc-display-area {
+background-color: transparent;
+width: 100% !important;
+border: 0;
+}
+
+.gc-icon {
+background: #242425;
+border: #464024;
+color: #464024;
+border-radius: 20px;
+}
+
+.gc-icon-next, .gc-icon-close::before, .gc-icon-next::before {
+right: 0;
+}
+
+.gc-icon-prev, .gc-icon-prev::before {
+left: 0;
+}
+
+.gc-icon-next::before, .gc-icon-prev::before .gc-icon-close::before {
+top: 0;
+}
+
+.gc-zoom-area {
+background-color: transparent;
+border-color: #464024;
+}
+
+.glass-case ul li {
+background-color: transparent;
+border: 0;
+}
+
+.glass-case ul li.gc-active {
+border: 2px solid #464024;
+}
+
+.glass-case ul li:hover, .glass-case ul li.gc-active:hover {
+border: 2px solid #464024;
+}
+
+.glass-case ul li .gc-display-container img {
+width: 100% !important;
+height: auto !important;
+}
+
+/* SLICK */
+.slick-slider {
+transition: opacity 0.2s ease-in-out;
+}
+
+.slick-prev {
+left: 0;
+z-index: 1;
+width: 50px;
+height: 100%;
+}
+
+.slick-next {
+right: 0;
+width: 50px;
+height: 100%;
+}
+
+.loading .slick-slider {
+opacity: 0;
+}
+
+.bit-widget-container .bit-widget a {
+font-family: Poppins, sans-serif;
+}
